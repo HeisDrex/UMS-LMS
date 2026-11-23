@@ -1,6 +1,6 @@
 # R1 Sitemap and Screen Inventory
 
-**Status:** Draft — for Project Owner review  
+**Status:** Approved by Project Owner  
 **Release stage:** R1 — Interactive Prototype  
 **Related backlog:** `docs/product/r1-prototype-backlog.md`  
 **Source basis:** PRD v1.0, UI/UX Design Specification v1.0, accepted project decisions, and approved R1 backlog  
