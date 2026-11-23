@@ -1,8 +1,8 @@
 # R1 Screen Specifications
 
-**Document status:** Draft — submitted for Project Owner review  
+**Document status:** Approved by Project Owner  
 **Release:** R1 Interactive Prototype  
-**Related approved artefacts:** R1 Prototype Backlog; R1 Sitemap and Screen Inventory  
+**Related approved artefacts:** R1 Prototype Backlog; R1 Sitemap and Screen Inventory; R1 Visual Direction and Design System  
 **Related design baseline:** R1 Visual Direction and Design System (approved)  
 **Source specifications:** PRD v1.0; UI/UX Design Specification v1.0  
 **Scope note:** These specifications describe six representative R1 screens. They do not authorize production authentication, backend workflows, real payments, or real institutional data.
