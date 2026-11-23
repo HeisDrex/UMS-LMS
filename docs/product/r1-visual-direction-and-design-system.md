@@ -1,6 +1,6 @@
 # R1 Visual Direction and Design System Proposal
 
-**Status:** Draft — for Project Owner review  
+**Status:** Approved by Project Owner  
 **Release stage:** R1 — Interactive Prototype  
 **Related documents:** `r1-prototype-backlog.md`; `r1-sitemap-and-screen-inventory.md`  
 **Source basis:** UI/UX Design Specification v1.0, PRD v1.0, and accepted project decisions  
