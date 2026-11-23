@@ -1,6 +1,6 @@
 # R1 Interactive Prototype Backlog
 
-**Status:** Draft — for Project Owner review  
+**Status:** Approved by Project Owner  
 **Release stage:** R1 — Interactive Prototype  
 **Related decision:** UL-ADR-0001  
 **Source basis:** Product Requirements Document (PRD), UI/UX Design Specification, and accepted project governance decisions
@@ -80,16 +80,19 @@ Acceptance:
 **Objective:** Let a stakeholder enter and explore each role's workspace.
 
 Tasks:
-- R1.3.1 Build a branded demonstration login/role-entry screen.
-- R1.3.2 Provide clearly identified fictional demo profiles for student, lecturer, institutional administrator, and platform operator.
-- R1.3.3 Route each demo profile to its corresponding workspace.
-- R1.3.4 Build the shared authenticated layout and role-appropriate navigation.
-- R1.3.5 Provide profile, notification, and workspace-context presentation using sample data.
+- R1.3.1 Build one common branded demonstration login screen; do not display a public workspace selector or role picker.
+- R1.3.2 Provide fictional demo accounts and credentials for student, lecturer, institutional administrator, and platform operator journeys.
+- R1.3.3 After simulated sign-in, route each demo account directly to its configured authorized workspace.
+- R1.3.4 If a demo account has multiple configured authorized institutional contexts, show a restricted context selector only after sign-in.
+- R1.3.5 Build the shared authenticated layout and account-specific navigation.
+- R1.3.6 Provide profile, notification, and workspace-context presentation using sample data.
 
 Acceptance:
 - Each principal role has a distinct, navigable workspace.
-- Navigation labels and visible sections match the selected demonstration role.
-- The interface clearly identifies this as a demo; it does not imply that the role selector provides real security.
+- Users enter through the common login form; no public workspace selector or role picker is presented.
+- Successful demo sign-in routes to the account's configured authorized workspace.
+- Any multiple-context selector appears only after sign-in and contains only contexts assigned to that demo account.
+- The interface clearly identifies the flow as a simulation and does not imply production authentication or authorization.
 
 ### R1.4 — Student learning journey
 
