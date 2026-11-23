@@ -1,6 +1,6 @@
 # R1 Prototype Implementation Plan
 
-**Status:** Draft — for Project Owner review  
+**Status:** Approved by Project Owner  
 **Release stage:** R1 — Interactive Prototype  
 **Related approved artefacts:** R1 Prototype Backlog; R1 Sitemap and Screen Inventory; R1 Visual Direction and Design System; R1 Screen Specifications  
 **Governance basis:** Master Development Instructions v2.1; accepted UL-ADR-0001 and applicable accepted technical decisions  
@@ -64,21 +64,20 @@ Any proposed addition to these exclusions requires a separate scope decision and
 - Shared design system and application shell.
 - Backend remains the owner of business rules and authorization in later releases; R1 only demonstrates the user-facing flows.
 
-### 4.2 Decisions not made by this plan
+### 4.2 Approved G0 tooling baseline
 
-The following remain open and must be evaluated before installation or adoption:
+The Project Owner approved the G0 tooling choices recorded in [G0 Tooling Decisions and Compatibility Record](../engineering/g0-tooling-decisions.md):
 
-- Package manager and workspace tooling.
-- CSS/styling implementation.
-- UI component library, if any.
-- Icon package.
-- Charting package, if any.
-- Form-validation library.
-- Client state-management library, if needed.
-- Animation library, if needed.
-- Exact linting, formatting and test tool versions.
+- pnpm workspaces and a single committed lockfile.
+- shadcn/ui component source customized to the approved R1 design tokens.
+- Tailwind CSS v4 and Lucide React.
+- React Hook Form and Zod for complex forms; native validation for simple forms where sufficient.
+- Vitest and React Testing Library for unit/component tests.
+- Playwright for end-to-end browser tests.
+- ESLint and Prettier.
+- Node.js 24 LTS as the initial runtime baseline.
 
-Prefer the smallest maintained dependency set that satisfies the approved requirements. Do not add a library merely because it appears in an earlier draft. Present material dependency choices with rationale, trade-offs, licensing/maintenance considerations and recommendation for owner approval.
+Pin compatible stable versions during project initialization. Keep dependencies limited to actual R1 needs. Any material new dependency or change to this baseline must be justified and reviewed under project governance.
 
 ### 4.3 Proposed frontend organization
 
@@ -335,7 +334,7 @@ Security-sensitive prototype boundaries to verify:
 - No UI claim suggests production authentication, authorization, tenant isolation or payment processing.
 - No unapproved external service or production data source is connected.
 
-Specific testing libraries and automated test coverage targets remain subject to technical evaluation and owner approval under the dependency/tooling policy.
+The approved testing baseline is Vitest with React Testing Library for unit/component tests and Playwright for end-to-end tests. Vitest is not currently suitable for asynchronous Server Component tests; cover those behaviours through Playwright. Set pragmatic per-work-package coverage expectations during implementation rather than inventing a global percentage target.
 
 ## 9. GitHub workflow and review gates
 
@@ -363,18 +362,11 @@ Specific testing libraries and automated test coverage targets remain subject to
 
 Approval of this plan alone does not approve unresolved dependencies, production capabilities, new product scope or merging to `main`.
 
-## 11. Open implementation decisions
+## 11. Remaining implementation inputs
 
-The following should be brought to the Project Owner as focused recommendations before implementation needs them:
+The G0 package manager, UI approach, test tooling and development operating system have been decided and are documented in the G0 Tooling Decisions and Compatibility Record.
 
-1. Package manager and monorepo workspace tooling.
-2. Styling approach and whether to use a component library.
-3. Icon family/package.
-4. Form validation approach.
-5. Test tooling appropriate to the R1 frontend prototype.
-6. Exact fictional institution identity and demo-account fixture details, if not already supplied.
-
-Do not block the entire plan on speculative future tools. Resolve each decision when its implementation dependency is reached, with rationale and approval where required.
+The remaining product-specific inputs are the exact fictional institution identity and demo-account fixture details, if not already supplied. These can be resolved when the relevant R1.1/R1.3 implementation work requires them. Do not block project initialization on speculative future product details.
 
 ## 12. R1 completion standard
 
