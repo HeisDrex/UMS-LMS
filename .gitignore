@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.*
+# Build output
+.next/
+out/
+dist/
+build/
+coverage/
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+# Logs and runtime
+*.log
+logs/
+*.pid
+*.seed
+# Editor and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Local databases and uploads
+*.sqlite
+*.db
+uploads/
